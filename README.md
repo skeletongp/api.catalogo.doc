@@ -1,5 +1,5 @@
 # Api Catálogo
-![AtrionTech Soluciones Digitales](https://res.cloudinary.com/dboafhu31/image/upload/c_scale,w_150/v1640200158/j2tkinbsvvlzlrksy7nk.png)
+![AtrionTech Soluciones Digitales](https://res.cloudinary.com/dboafhu31/image/upload/c_scale,w_270/v1645757007/con_fondo_negro_jcemcg.jpg)
 ## 1.Generalidades
 ------
 ### 1.1 Descripción
