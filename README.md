@@ -15,7 +15,7 @@ Funciones recomendadas únicamente para el administrador, ya que tienen que ver 
 Funciones de autenticación de usuario. A través de estos endpoint, cualquier persona puede registrarse y loguearse como usuario del sistema, siempre que tenga los accesos requeridos, de acuerdo a la especificación de cada uno.
 
 #### 2.1.1 Registrarse
-Permite crear una cuenta de usuario con los datos básicos (nombre, correo, teléfono y contraseña). Al crear un usuario a través de este endpoint, se obtienen todos los permisos de la api, razón por la cual sólo se puede acceder a esta función con un token válido previamente registrado en el sistema, el cual debe incluirse en el encabezado de la petición como tipo Bearer. Todos los campos del body son obligatorios para el registro, el cual devuelve una respuesta de tipo json con el usuario registrado, su token y el tipo de token.
+Permite crear una cuenta de usuario con los datos básicos (nombre, correo, teléfono y contraseña). Al crear un usuario a través de este endpoint, se le asignan todos los permisos de la api, razón por la cual sólo se puede acceder a esta función con un token válido previamente registrado en el sistema, el cual debe incluirse en el encabezado de la petición como tipo Bearer. Todos los campos del body son obligatorios para el registro, el cual devuelve una respuesta de tipo json con el usuario registrado, su token y el tipo de token.
 ```
 ENDPOINT: /admin/register
 METHOD POST
@@ -28,6 +28,7 @@ password=> required|string|min:8; phone=>required|string|max:12
 RETURN: json=> user, token , token_type
 ```
 #### 2.1.2 Loguearse
+Este endpoint permite al usuario loguearse en la api, para lo cual debe proporcionar un correo y una contraseña válidos. Al recibir estos valores y validarlos, la api le genera un access token, el cual es devuelto en un respuesta tipo json, así como el usuario logueado y el tipo de token que le corresponde. IMPORTANTE: siempre que un usuario hace login a través de este endpoint, se revoka cualquier token antes registrado, de modo que siempre se mantendrá sólo el último creado.
 ```
 ENDPOINT: /admin/login
 METHOD POST
@@ -40,6 +41,7 @@ password=> required|string|min:8;
 RETURN: json=> user, token , token_type
 ```
 ### 2.2 User
+Si bien los dos endpoints anteriores manejan el registro de usuarios en el sistema, están localizados en una categoría propia, ya que son las rutas para registro y login, es decir, para autenticación de usuario en el sistema, por lo que también generan o modifican su access token. En este apartado se incluyen los métodos para gestionar los usuarios sin intervenir la autenticación de los mismos. Todas estas rutas sólo son accesibles para usuarios registrados y con los permisos correspondientes.
 #### 2.2.1 Crear Usuario
 ```
 ENDPOINT: user
