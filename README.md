@@ -12,7 +12,7 @@
       - [2.2.4 Devolver un Usuario](#224-devolver-un-usuario)
       - [2.2.4 Eliminar un Usuario](#224-eliminar-un-usuario)
 # Api Catálogo
-![AtrionTech Soluciones Digitales](https://res.cloudinary.com/dboafhu31/image/upload/c_scale,w_150/v1640200158/j2tkinbsvvlzlrksy7nk.png)
+![AtrionTech Soluciones Digitales](https://res.cloudinary.com/dboafhu31/image/upload/c_scale,w_270/v1645757007/con_fondo_negro_jcemcg.jpg)
 ## 1.Generalidades
 ------
 ### 1.1 Descripción
@@ -44,7 +44,7 @@ password=> required|string|min:8; phone=>required|string|max:12
 RETURN: json=> user, token , token_type
 ```
 #### 2.1.2 Loguearse
-Este endpoint permite al usuario loguearse en la api, para lo cual debe proporcionar un correo y una contraseña válidos. Al recibir estos valores y validarlos, la api le genera un access token, el cual es devuelto en un respuesta tipo json, así como el usuario logueado y el tipo de token que le corresponde. IMPORTANTE: siempre que un usuario hace login a través de este endpoint, se revoka cualquier token antes registrado, de modo que siempre se mantendrá sólo el último creado.
+Este endpoint permite al usuario loguearse en la api, para lo cual debe proporcionar un correo y una contraseña válidos. Al recibir estos valores y validarlos, la api le genera un access token, el cual es devuelto en un respuesta tipo json, así como el usuario logueado y el tipo de token que le corresponde. IMPORTANTE: siempre que un usuario hace login a través de este endpoint, se revoca cualquier token antes registrado, de modo que siempre se mantendrá sólo el último creado.
 ```
 ENDPOINT: /admin/login
 METHOD POST
@@ -59,7 +59,7 @@ RETURN: json=> user, token , token_type
 ### 2.2 User
 Si bien los dos endpoints anteriores manejan el registro de usuarios en el sistema, están localizados en una categoría propia, ya que son las rutas para registro y login, es decir, para autenticación de usuario en el sistema, por lo que también generan o modifican su access token. En este apartado se incluyen los métodos para gestionar los usuarios sin intervenir la autenticación de los mismos. Todas estas rutas sólo son accesibles para usuarios registrados y con los permisos correspondientes.
 #### 2.2.1 Crear Usuario
-En esta parte un usuario con el scope (permiso) correspondeinte podrá registrar nuevos usuarios en el sistema y asignarle los permisos que conside de los que mencionan en el aparado **Scopes de la api**. Todos los campos del body son obligatorios, con excepción del "scopes". Este último es un array personal que contiene los permisos que se desea asignar al usuario. En caso de no enviarlo, el usuario tendrá todos los permisos del sistema; en caso de enviar un array vacío, el usuario no tendrá ningún permiso. El campo slug se genera automáticamente a partir del nombre suministrado. Retorna una respuesta json con el usuario creado.
+En esta parte un usuario con el scope (permiso) correspondiente podrá registrar nuevos usuarios en el sistema y asignarles los permisos que conside de los que mencionan en el aparado **Scopes de la api**. Todos los campos del body son obligatorios, con excepción del "scopes". Este último es un array personal que contiene los permisos que se desea asignar al usuario. En caso de no enviarlo, el usuario tendrá todos los permisos del sistema; en caso de enviar un array vacío, el usuario no tendrá ningún permiso. El campo slug se genera automáticamente a partir del nombre suministrado. Retorna una respuesta json con el usuario creado.
 ```
 ENDPOINT: /user
 METHOD POST
@@ -126,4 +126,4 @@ BODY: none
 RETURN: json=> user->slug
 ```
 
-Si te va gustando cómo va quedando la documentación, por favor sigue nuestra página de Facebook [AtrionTech Soluciones Digitales](https://www.facebook.com/atriontech)
+Si te gusta cómo va quedando la documentación, por favor sigue nuestra página de Facebook [AtrionTech Soluciones Digitales](https://www.facebook.com/atriontech)
