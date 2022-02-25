@@ -10,7 +10,7 @@
       - [2.2.2 Editar Usuario](#222-editar-usuario)
       - [2.2.3 Devolver todos los Usuarios](#223-devolver-todos-los-usuarios)
       - [2.2.4 Devolver un Usuario](#224-devolver-un-usuario)
-      - [2.2.4 Eliminar un Usuario](#224-eliminar-un-usuario)
+      - [2.2.5 Eliminar un Usuario](#225-eliminar-un-usuario)
 # Api Catálogo
 ![AtrionTech Soluciones Digitales](https://res.cloudinary.com/dboafhu31/image/upload/c_scale,w_270/v1645757007/con_fondo_negro_jcemcg.jpg)
 ## 1.Generalidades
@@ -114,7 +114,7 @@ PARAMS: included= tokens
 BODY: none
 RETURN: json=> user
 ```
-#### 2.2.4 Eliminar un Usuario
+#### 2.2.5 Eliminar un Usuario
 Este endpoint permite eliminar al usuario marcado de la base de datos. Sin embargo, no es un borrado absoluto, de modo que dicho usuario podrá ser consultado luego aplicando el parámetro *trashed* al endpoint que devuelve todos los usuarios. Aunque no es un borrado absoluto y requiere permiso de usuario, se recomienda ejecutar esta ruta con un filtro de confirmación previa.
 ```
 ENDPOINT: /user/{user->slug}
@@ -126,4 +126,4 @@ BODY: none
 RETURN: json=> user->slug
 ```
 
-Si te gusta cómo va quedando la documentación, por favor sigue nuestra página de Facebook [AtrionTech Soluciones Digitales](https://www.facebook.com/atriontech)
+Si te va gustando cómo va quedando la documentación, por favor sigue nuestra página de Facebook [AtrionTech Soluciones Digitales](https://www.facebook.com/atriontech)
