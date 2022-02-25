@@ -1,5 +1,18 @@
+- [Api Catálogo](#api-catálogo)
+  - [## 1.Generalidades](#-1generalidades)
+    - [1.1 Descripción](#11-descripción)
+  - [## 2.Admin](#-2admin)
+    - [2.1 Auth](#21-auth)
+      - [2.1.1 Registrarse](#211-registrarse)
+      - [2.1.2 Loguearse](#212-loguearse)
+    - [2.2 User](#22-user)
+      - [2.2.1 Crear Usuario](#221-crear-usuario)
+      - [2.2.2 Editar Usuario](#222-editar-usuario)
+      - [2.2.3 Devolver todos los Usuarios](#223-devolver-todos-los-usuarios)
+      - [2.2.4 Devolver un Usuario](#224-devolver-un-usuario)
+      - [2.2.4 Eliminar un Usuario](#224-eliminar-un-usuario)
 # Api Catálogo
-![AtrionTech Soluciones Digitales](https://res.cloudinary.com/dboafhu31/image/upload/c_scale,w_270/v1645757007/con_fondo_negro_jcemcg.jpg)
+![AtrionTech Soluciones Digitales](https://res.cloudinary.com/dboafhu31/image/upload/c_scale,w_150/v1640200158/j2tkinbsvvlzlrksy7nk.png)
 ## 1.Generalidades
 ------
 ### 1.1 Descripción
